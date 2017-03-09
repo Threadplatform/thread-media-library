@@ -11,8 +11,9 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @book.user.name %>
+  <strong>Current Reader:</strong>
+   <%= if @book.user then @book.user.name else link_to "Check out", book_path(@book, book: {user_id: current_user.id}), method: :put end %>
+   <%= if @book.user == current_user then link_to "Return", book_path(@book, book: {user_id: nil}), method: :put end %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |

@@ -1,13 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-  <h1>Books</h1>
+  <h2>Books</h2><h2><%= link_to "Videos", videos_path %></h2>
 
+  <%= render 'shared/search' %>
   <table>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Author</th>
-        <th>User</th>
+        <th><%= link_to "Name", request.query_parameters.merge(order: "name") %></th>
+        <th><%= link_to "Author", request.query_parameters.merge(order: "author") %></th>
+        <th>Current Reader</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -17,10 +18,12 @@
         <tr>
           <td><%= book.name %></td>
           <td><%= book.author %></td>
-          <td><%= if book.user then book.user.name else link_to "Check out", book_path(book, book: {user_id: current_user.id}), method: :put end %></td>
-          <td><%= link_to 'Show', book %></td>
+          <% if current_user %>
+            <td><%= if book.user then mail_to book.user.email, book.user.name else link_to "Check out", book_path(book, book: {user_id: current_user.id}), method: :put end %> <%= if book.user == current_user then link_to "Return", book_path(book, book: {user_id: nil}), method: :put end %></td>
+          <% end %>
+          <td><%= link_to 'View', book %></td>
           <td><%= link_to 'Edit', edit_book_path(book) %></td>
-          <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ <!--         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
         </tr>
       <% end %>
     </tbody>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+  <h1>Thread Media</h1>
+  <h2><%= link_to "Books", books_path %></h2><h2>Videos</h2>
+
+  <%= render 'shared/search' %>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= link_to "Name", request.query_parameters.merge(order: "name") %></th>
+      <th>Link</th>
+      <th><%= link_to "Source", request.query_parameters.merge(order: "source") %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @videos.each do |video| %>
+      <tr>
+        <td><%= video.name %></td>
+        <td><%= link_to "View", video.link, target: "_blank" %></td>
+        <td><%= video.source %></td>
+        <td><%= link_to 'Show', video %></td>
+        <td><%= link_to 'Edit', edit_video_path(video) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Video', new_video_path %>

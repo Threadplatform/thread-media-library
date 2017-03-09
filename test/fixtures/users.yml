@@ -3,13 +3,14 @@
 one:
   provider: MyString
   uid: MyString
-  name: MyString
+  name: SamplePerson
+  email: sample.person@thread.org
   oauth_token: MyString
   oauth_expires_at: 2017-03-06 16:59:51
 
 two:
   provider: MyString
   uid: MyString
-  name: MyString
+  name: sample.persontwo@thread.org
   oauth_token: MyString
   oauth_expires_at: 2017-03-06 16:59:51
