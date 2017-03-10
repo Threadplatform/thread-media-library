@@ -1,0 +1,142 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - '2017-03-06 21:59:56.868662'
+    - '2017-03-06 21:59:56.868662'
+
+---
+books:
+  columns:
+  - id
+  - name
+  - author
+  - user_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Mind
+    - Daniel J. Siegel, MD
+    - 
+    - '2017-03-09 15:54:26.428064'
+    - '2017-03-09 19:46:26.650524'
+  - - 2
+    - The Bulletproof Diet
+    - Dave Asprey
+    - 3
+    - '2017-03-09 16:57:24.280511'
+    - '2017-03-09 21:48:09.514108'
+  - - 3
+    - The Opportunity Makers
+    - Chales Rutheiser
+    - 
+    - '2017-03-09 19:22:54.305508'
+    - '2017-03-09 19:22:54.305508'
+  - - 4
+    - We the People
+    - John Buck and Sharon Villines
+    - 
+    - '2017-03-09 19:23:22.060801'
+    - '2017-03-09 19:23:22.060801'
+  - - 5
+    - Do the Kind Thing
+    - Daniel Lubetzky
+    - 3
+    - '2017-03-09 19:23:52.914994'
+    - '2017-03-09 20:54:31.460227'
+  - - 6
+    - Zero to One
+    - Peter Thiel
+    - 
+    - '2017-03-09 19:24:16.342151'
+    - '2017-03-09 19:24:16.342151'
+  - - 7
+    - REACH
+    - Bob Jealous and Trabian Shorters
+    - 
+    - '2017-03-09 19:24:50.306949'
+    - '2017-03-09 19:24:50.306949'
+  - - 8
+    - The Power of Intention
+    - Dr. Wayne W. Dyer
+    - 
+    - '2017-03-09 19:25:19.517223'
+    - '2017-03-09 19:25:19.517223'
+  - - 9
+    - Mindset
+    - Carol S. Dweck, Ph.D.
+    - 
+    - '2017-03-09 19:25:38.566218'
+    - '2017-03-09 19:25:38.566218'
+  - - 10
+    - Tribes
+    - Seth Godin
+    - 
+    - '2017-03-09 19:25:51.308923'
+    - '2017-03-09 19:29:40.968317'
+  - - 11
+    - 'Leadership on the Line: Staying Alive through the Dangers of Leading'
+    - Ronald A. Heifetz and Marty Linsky
+    - 
+    - '2017-03-09 19:26:37.941594'
+    - '2017-03-09 19:28:44.912691'
+
+---
+users:
+  columns:
+  - id
+  - provider
+  - uid
+  - name
+  - oauth_token
+  - oauth_expires_at
+  - created_at
+  - updated_at
+  - email
+  - image
+  records: 
+  - - 2
+    - 
+    - 
+    - Maggie Epps
+    - 
+    - 
+    - '2017-03-09 18:49:28.080451'
+    - '2017-03-09 18:49:28.080451'
+    - maggie.epps+1@thread.org
+    - 
+  - - 3
+    - google_oauth2
+    - '102183764276702970044'
+    - Maggie Epps
+    - 
+    - '2017-03-09 20:42:16'
+    - '2017-03-09 18:55:05.112024'
+    - '2017-03-09 19:42:16.470875'
+    - maggie.epps@thread.org
+    - https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg
+
+---
+videos:
+  columns:
+  - id
+  - name
+  - link
+  - source
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Rapid Prototyping - Week 2
+    - https://vimeo.com/161025795/897c0384f2
+    - Tom Chi
+    - '2017-03-09 21:18:45.087076'
+    - '2017-03-09 21:18:45.087076'
