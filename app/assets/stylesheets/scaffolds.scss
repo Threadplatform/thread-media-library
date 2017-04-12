@@ -31,6 +31,9 @@ a {
     color: #fff;
     background-color: #000;
   }
+  &.active {
+    text-decoration: none;
+  }
 }
 
 th {

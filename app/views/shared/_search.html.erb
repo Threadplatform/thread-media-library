@@ -1,7 +1,0 @@
-  <%= form_tag books_path, :method => 'get' do %>
-    <p>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", :name => nil %>
-      <%= if params[:search] && !params[:search].empty? then link_to "Clear", request.query_parameters.merge(search: "") end %>
-    </p>
-  <% end %>

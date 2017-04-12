@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<%= render 'shared/header', type: 'videos' %>
 
 <p>
   <strong>Name:</strong>
@@ -6,14 +6,14 @@
 </p>
 
 <p>
-  <strong>Link:</strong>
-  <%= @video.link %>
-</p>
-
-<p>
   <strong>Source:</strong>
   <%= @video.source %>
 </p>
+
+<p>
+  <%= link_to 'Watch', @video.link, target: "_blank" %>
+</p>
+
 
 <%= link_to 'Edit', edit_video_path(@video) %> |
 <%= link_to 'Back', videos_path %>

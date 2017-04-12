@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
-  resources :videos
   root to: 'books#index'
 
-  resources :books
+  concern :reviewable do
+    resources :reviews
+  end
+
+  resources :books, concerns: :reviewable
+  resources :videos, concerns: :reviewable
 
   resources :sessions, only: [:create, :destroy]
   resources :users, only: [:show, :index]

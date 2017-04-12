@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
 
-  <h2>Books</h2><h2><%= link_to "Videos", videos_path %></h2>
 
-  <%= render 'shared/search' %>
+  <%= render 'shared/header', type: 'books' %>
   <table>
     <thead>
       <tr>
@@ -21,9 +19,8 @@
           <% if current_user %>
             <td><%= if book.user then mail_to book.user.email, book.user.name else link_to "Check out", book_path(book, book: {user_id: current_user.id}), method: :put end %> <%= if book.user == current_user then link_to "Return", book_path(book, book: {user_id: nil}), method: :put end %></td>
           <% end %>
-          <td><%= link_to 'View', book %></td>
+          <td><%= link_to 'Reviews', book %></td>
           <td><%= link_to 'Edit', edit_book_path(book) %></td>
- <!--         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
         </tr>
       <% end %>
     </tbody>
