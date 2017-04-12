@@ -1,0 +1,17 @@
+// Place all the styles related to the Reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.reviews {
+	margin: 20px 0px;
+	background: #DFF2FE;
+	border: 1px solid darken(#DFF2FE, 40%);
+	padding: 20px;
+	width: 50%;
+	.attr {
+		font-style: italic;
+	}
+	p {
+		margin: 15px;
+	}
+}

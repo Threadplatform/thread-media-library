@@ -18,3 +18,5 @@
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
+
+<%= render 'reviews/index', reviewable: @book, reviewable_type: 'book' %>

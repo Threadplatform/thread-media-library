@@ -1,0 +1,8 @@
+<div class="reviews">
+	<h2>Reviews</h2>
+	<%= link_to 'New', eval("new_#{reviewable_type}_review_path(#{reviewable_type}_id: reviewable.id)"), class: 'btn' %>
+	<% reviewable.reviews.each do |review| %>
+		<p>"<%= review.content %>" </p>
+		<p>- <%= review.user.name %>, <span class="attr"><%= review.created_at.strftime("%B") %> <%= review.created_at.strftime("%Y") %></span> </p>
+	<% end %>
+</div>

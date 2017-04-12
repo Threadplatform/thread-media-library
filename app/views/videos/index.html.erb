@@ -19,8 +19,9 @@
       <tr>
         <td><%= video.name %></td>
         <td><%= video.source %></td>
-        <td><%= link_to "View", video.link, target: "_blank" %></td>
+        <td><%= link_to 'Watch', video.link, target: "_blank" %></td>
         <td><%= link_to 'Edit', edit_video_path(video) %></td>
+        <td><%= link_to 'Reviews', video_path(video) %></td>
       </tr>
     <% end %>
   </tbody>
