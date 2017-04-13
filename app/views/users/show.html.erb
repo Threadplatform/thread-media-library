@@ -1,2 +1,12 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<%= render 'shared/header', type: 'books' %>
+
+<h2>My Books</h2>
+<% if @user.books.length > 0 %>
+	<ul>
+	<% @user.books.each do |book| %>
+		<li><span class="italic"><%= book.name %></span>, <%= book.author %> <%= link_to "Return", book_path(book, book: {user_id: nil}), method: :put %></li>
+	<% end %>
+	</ul>
+<% else %>
+	<p>You haven't checked out any books. Why don't you search or <%= link_to "browse", books_path %>?</p>
+<% end %>

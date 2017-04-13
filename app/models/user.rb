@@ -1,5 +1,6 @@
 class User < ApplicationRecord
 	belongs_to :user, optional: true
+	has_many :books
 	validates_format_of :email, :with => /\A([^@\s]+)@*thread\.org\b/i
 
 	def self.from_omniauth(auth)
