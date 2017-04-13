@@ -4,7 +4,7 @@ class Video < ApplicationRecord
 
   def self.search search
 	  if search
-	    where(['name LIKE ? OR source LIKE ?', "%#{search}%",  "%#{search}%"])
+	    where(['LOWER(name) LIKE ? OR LOWER(source) LIKE ?', "%#{search.downcase}%",  "%#{search.downcase}%"])
 	  else
 	    all
 	  end

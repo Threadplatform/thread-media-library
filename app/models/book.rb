@@ -4,7 +4,7 @@ class Book < ApplicationRecord
 
   def self.search search
 	  if search
-	    where(['name LIKE ? OR author LIKE ?', "%#{search}%",  "%#{search}%"])
+	    where(['LOWER(name) LIKE ? OR LOWER(author) LIKE ?', "%#{search.downcase}%",  "%#{search.downcase}%"])
 	  else
 	    all
 	  end
