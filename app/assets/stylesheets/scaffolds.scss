@@ -1,3 +1,35 @@
+#nav {
+  ul {
+    padding: 0px;
+    margin: 0px;
+    li {
+      display: inline-block;
+      color: black;
+      padding: 5px;
+      &:hover {
+        background-color: #F97352;
+        color: white;
+      }
+      a {
+        text-decoration: none;
+        line-height: 40px;
+        font-weight: bold;
+        &:hover {
+          background: inherit;
+        }
+      }
+      img {
+        height: 40px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.pull-right {
+  float: right;
+}
+
 body {
   background-color: #fff;
   color: #333;

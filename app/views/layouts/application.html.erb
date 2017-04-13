@@ -9,14 +9,13 @@
 	<link rel="shortcut icon" href="http://www.thread.org/wp-content/uploads/2014/06/favicon.png"  />
   </head>
   <body>
-  	<img src="https://www.thread.org/wp-content/uploads/2014/06/Thread14_IdentityP01PANTONE_4-color_wTag-copy.png" alt="">
   	<% if current_user %>
-    <div id="user">
+    <div id="nav">
       <ul>
-        <li><img src="<%= current_user.image %>" height="50px" alt=""></li>
-        <li><p><%= current_user.name %></p></li>
-        <li><p><%= link_to "Back to Intranet", "https://sites.google.com/incentivementoringprogram.org/staff-intranet", target: "_blank" %></p></li>
-  	    <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
+        <li><a href="http://thread.org" target="_blank"><img src="https://www.thread.org/wp-content/uploads/2014/06/Thread14_IdentityP01PANTONE_4-color_wTag-copy.png" alt=""></a></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><img src="<%= current_user.image %>" height="50px" alt=""> <%= link_to current_user.name, current_user %></li>
+  	    <li class="pull-right"><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
       </ul>
     </div>
     <h1>Thread Media Library</h1>
